@@ -1,8 +1,21 @@
 import type {NextPage} from 'next'
-import Head from 'next/head'
-
+import {useRouter} from 'next/router';
+import {useEffect} from 'react';
 
 const Home: NextPage = () => {
+    const router = useRouter();
+    const handleRouteChange = (url) => {
+        window.gtag('config', 'UA-12345-1', {
+            page_path: url,
+        });
+    };
+    useEffect(() => {
+        console.log("asdasd")
+        router.events.on('routeChangeComplete', handleRouteChange);
+        return () => {
+            router.events.off('routeChangeComplete', handleRouteChange);
+        };
+    }, [router.events]);
     return (
         <div>
             <header id="header" className="fixed-top d-flex align-items-cente">

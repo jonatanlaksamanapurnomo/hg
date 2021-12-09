@@ -30,6 +30,22 @@ function MyApp({Component, pageProps}: AppProps) {
                 <script src="/static/vendor/php-email-form/validate.js"/>
                 <script src="/static/js/main.js"/>
 
+                <script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=UA-12345-1"
+                />
+
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-12345-1', { page_path: window.location.pathname });
+            `,
+                    }}
+                />
+
             </head>
             <Component {...pageProps} />
         </>
