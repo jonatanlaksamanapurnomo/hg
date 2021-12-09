@@ -45,13 +45,15 @@ function MyApp({Component, pageProps}: AppProps) {
                     src="https://www.googletagmanager.com/gtag/js?id=UA-214926520-1"
                 />
 
+
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', UA-214926520-1', { page_path: window.location.pathname });
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'UA-214926520-1');
             `,
                     }}
                 />
