@@ -4,7 +4,7 @@ import {useEffect} from 'react';
 
 const Home: NextPage = () => {
     const router = useRouter();
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url: string) => {
         window.gtag('config', 'UA-12345-1', {
             page_path: url,
         });
