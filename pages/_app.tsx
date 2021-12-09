@@ -43,7 +43,7 @@ function MyApp({Component, pageProps}: AppProps) {
 
                 <script
                     async
-                    src="https://www.googletagmanager.com/gtag/js?id=UA-12345-1"
+                    src="https://www.googletagmanager.com/gtag/js?id=UA-214926520-1"
                 />
 
                 <script
@@ -52,7 +52,7 @@ function MyApp({Component, pageProps}: AppProps) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'UA-12345-1', { page_path: window.location.pathname });
+              gtag('config', UA-214926520-1', { page_path: window.location.pathname });
             `,
                     }}
                 />

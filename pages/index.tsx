@@ -6,12 +6,12 @@ const Home: NextPage = () => {
     const router = useRouter();
     const handleRouteChange = (url: string) => {
         // @ts-ignore
-        window.gtag('config', 'UA-12345-1', {
+        window.gtag('config', 'UA-214926520-1', {
             page_path: url,
         });
     };
     useEffect(() => {
-        console.log("asdasd")
+
         router.events.on('routeChangeComplete', handleRouteChange);
         return () => {
             router.events.off('routeChangeComplete', handleRouteChange);
